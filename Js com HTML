@@ -1,0 +1,74 @@
+/*Ao clicar em um elemento do menu, o conteudo da area
+central sera alterado*/
+
+/**
+ * 1)Selecionar o elemento que vai disparar a ação ou evento
+*/
+
+document.getElementById("home").onclick =
+function(){
+    document.getElementById("content").innerHTML = "home";
+}
+
+document.getElementById("contato").onclick =
+function(){
+    document.getElementById("content").innerHTML = "contato";
+}
+
+document.getElementById("cursos").onclick =
+function(){
+    document.getElementById("content").innerHTML = "cursos";
+}
+
+document.getElementById("comercial").onclick =
+function(){
+    document.getElementById("content").innerHTML = "comercial";
+}
+
+document.getElementById("home").onmouseover =
+function(){
+    document.getElementById("home").style.textDecoration
+    ="underline";
+    this.style.cursor = "pointer";
+}
+
+document.getElementById("home").onmouseleave =
+function(){
+    document.getElementById("home").style.textDecoration /*this*/
+    ="none";
+}
+
+document.getElementById("contato").onmouseover =
+function(){
+    document.getElementById("contato").style.textDecoration
+    ="underline";
+    this.style.cursor = "none";
+}
+
+document.getElementById("cursos").onmouseover =
+function(){
+    document.getElementById("cursos").style.textDecoration
+    ="underline";
+    this.style.cursor = "none";
+}
+
+document.getElementById("comercial").onmouseover =
+function(){
+    document.getElementById("comercial").style.textDecoration
+    ="underline";
+    this.style.cursor = "none";
+}
+
+/*js com estrutura de re*/
+var lista = document.getElementsByTagName('li');
+
+for(let i = 0; i< lista.length; i++){
+    lista[i].onmouseover = function(){
+        lista[i].style.textDecoration = "underline"
+        lista[i].stylr.cursor = "pointer";
+    }
+
+    lista[i];onmouseover = function(){
+        lista[i].style.textDecoration = "none";
+    }
+}
